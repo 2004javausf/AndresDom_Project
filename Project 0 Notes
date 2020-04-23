@@ -1,0 +1,29 @@
+Read input from Scanner
+
+Validation - two points of entry (Login/SignUp-single account or Joint)
+
+*Java Beans to get stored data
+*Break out Transactions into numbers (1,2,3)
+
+Switch: User Types
+-Customer
+-Employee
+-Admin
+
+Switch: Transaction type (Customer)(between accounts)
+-Withdraw (If statement validation negative value)
+-Deposit
+-Transfer 
+
+Switch: Employee
+-View Customer Account
+-Application Decisions (Approve/Deny)
+
+Switch: Admin
+-View All Accounts
+-Edit
+-Approve/Deny Accounts
+-Account Transaction (Withdraw/Deposit/Transfer)
+
+
+
