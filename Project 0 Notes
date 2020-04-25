@@ -1,12 +1,87 @@
+Create Maven.
+Ask if you want to LogIn or SignUP using switch of if statement
+
 Read input from Scanner
 
-Validation - two points of entry (Login/SignUp-single account or Joint)
+
+Validation - two points of entry (Login/SignUp-single account or Joint)//switch
+	{
+		if (its logIn{){
+		When a profile has already been created
+		validate user data(username and passwrod = String)
+		}
+
+		if (its signUp){
+		what kind of user are you?
+		if you are Customer then{
+			What kind of account you want?Joint or single
+			CREATE profile(FullName, Address, PhoneNumber, UserName, Password, AccStatus (default of pending)(if joint then add another FullName field)
+			Assign AccNum ();//only for customer class}
+		if you are Employee then{
+			CREATE profile(FullName, Address, PhoneNumber, UserName, Password)}
+			Assign EmpID();
+			Assign EmpID();//only for employee class
+		if you are Admin then{
+			CREATE profile(FullName, Address, PhoneNumber, UserName, Password)}
+			Assign AdminID();//only for Admin class
+		select type of user
+		create account (This will login to the session automatically)
+		
+
+		}
+	}
+
+
+	Classes - 
+	*Before cutomer can access his/her account it must be approved by Admin or Employee	
+	Customer:AccNum(){(for loop that increments AccNum by one every time you create a new user
+		AccNum=AccNUm+1}
+			if (AccStatus = pending){
+					sysout("Account is still in pending status. Please wait for Admin to approve your account")
+				else (AccessToAccount class){
+					switch statment(Balance, withdraw. deposit, transfer);
+				if balance is selected(display double balance);
+
+				if withdraw. is selected(display fields of data input AmmountOfWithdraw)// validate so the user can't put negative numbers.
+									//if withdraw bigger than balance then transaction invalid
+							(Format:$0.00)
+							finalBalance() {finalBalance = balance-withdraw;}
+							System.ou.println(finalBalance);
+
+					//Override finalBalance()
+
+				if deposit is selected (display fields for deposit, depAmt, AccNum)
+							finalBalance() {finalBalance = balance+depAmt;}
+							System.ou.println(finalBalance);
+				
+				if transfer is selected (display fields for transfer, OriginalAccNum, TAmt, NewAccNum) 
+							finalBalance() {finalBalance = balance - TAmt;}
+
+							//How do we transfer money from one account to another????
+							System.ou.println(finalBalance);				
+				**After each switch statement ASK customer if they would like to perform another transaction?
+				Do{
+					What transaction would you like to perform?
+					}WHILE (option == 5)//1)Balance 2)withdraw 3)Deposit 4)transfer //5)Exit
+				//Use IO class example to write a bankStatement.txt
+
+}
+
+
+	Employee: EmpID(){(for loop that increments AccNum by one every time you create a new user
+			EmpID=EmpID+1}
+			Display class customer info(Name, Adress, PhoneNumber, AcountNUmber,AccounType, Balance)
+
+ 	Admin:	AdminID(){(for loop that increments AccNum by one every time you create a new user
+			AdminID=AdminID+1}
+			//Use IO example to make a .txt where theAdmin can check all tha ccounts he needs to aprove.
+			Display and Edit class customer info(Name, Adress, PhoneNumber, AcountNUmber,AccounType, Balance)
 
 *Java Beans to get stored data
-*Break out Transactions into numbers (1,2,3)
+*Break out Transactions into numbers (1,2,3)//Switch statment
 
 Switch: User Types
--Customer
+-Customer (3 methods -deposit, withdraw, transfer) //Student Comparator reference for transfer
 -Employee
 -Admin
 
