@@ -8,8 +8,9 @@ public class UserLogIn {
 		
 	Scanner sc = new Scanner (System.in);
 	
-	System.out.println("Welcome to East Coast Bank\n\n Please select one of the following options:\n\n "
-			+ "Enter 1) for a new account or Enter 2) to login to an existing account 3) To Finish");
+	System.out.println("Welcome to East Coast Bank\n\n Please select one of the following options:")
+			System.out.println("[1] Create a new account");
+			System.out.println("[2] Log in to an existing account");
 
 	 int user = sc.nextInt(); // Read user inputs
 	 boolean validated;
@@ -21,28 +22,30 @@ public class UserLogIn {
 		SignUpForm userValues = new SignUpForm();
 		
 		
-		System.out.println("Account type 1)For Single account");
-		//System.out.println("Account type 2)For Joint account");
+		System.out.println("Enter [1] For Single account");
+		//System.out.println("Enter [2] For Joint account");
 		String accountType = sc.nextLine();
 		userValues.setAccountType(accountType);
 		
-		System.out.println("Insert Full Name: ");
+		System.out.println("Enter name (First/Last) for Primary Account Holder:");
 		String fullName = sc.next();
 		userValues.setFullName(fullName);
 		
-		System.out.println("Insert address: ");
+		System.out.println("Enter Primary Account Holder's city and state: ");
 		String address = sc.next();
 		userValues.setAddress(address);
 		
-		System.out.println("Insert phone number: ");
+		System.out.println("Enter phone number for Primary Account Holder: (xxx-xxx-xxxx");
 		String phoneNumber = sc.next();
 		userValues.setPhoneNumber(phoneNumber);
 		
-		System.out.println("Insert user name: ");
+		System.out.println("Create a user name for Primary Account Holder: ");
 		String userName = sc.next();
 		userValues.setUserName(userName);
+		// check to make sure username doesn't already exist
+		//if statement to check against username ArrayList
 		
-		System.out.println("Insert password: ");
+		System.out.println("Create a password for Primary Account Holder: ");
 		String password = sc.next();
 		userValues.setPassword(password);
 		
@@ -59,10 +62,10 @@ public class UserLogIn {
 	break;
 	
 	case 2:
-		System.out.println("You choose to Log In");
-		System.out.println("enter you user name");
+		System.out.println("Welcome back existing user");
+		System.out.println("Enter you username");
 		userName = sc.next();
-		System.out.println("enter you password");
+		System.out.println("Enter you password");
 		password = sc.next();
 		//Validate username and password exists and is correct
 		//Write code for wrong inputs (exception?)
@@ -79,12 +82,37 @@ public class UserLogIn {
 	case 3:
 		System.out.println("Have a good day!!");
 	break;
-	
-
-	
+		}
 	}
-	}
-	
-
-	
 }
+
+/*
+ * Scanner inputs for Joint Accounts
+ * 
+ * System.out.println("Enter [2] For Joint account"); String accountType2 =
+ * sc.nextLine(); userValues.setAccountType(accountType);
+ * 
+ * System.out.println("Enter name (First/Last) for Secondary Account Holder:");
+ * String fullName2 = sc.next(); userValues.setFullName(fullName);
+ * 
+ * System.out.println("Enter Secondary Account Holder's city and state: ");
+ * String address2 = sc.next(); userValues.setAddress(address);
+ * 
+ * System.out.
+ * println("Enter phone number for Secondary Account Holder: (xxx-xxx-xxxx");
+ * String phoneNumber2 = sc.next(); userValues.setPhoneNumber(phoneNumber);
+ * 
+ * System.out.println("Create a user name for Secondary Account Holder: ");
+ * String userName = sc.next(); userValues.setUserName(userName); // check to
+ * make sure username doesn't already exist //if statement to check against
+ * username ArrayList
+ * 
+ * System.out.println("Create a password for Secondary Account Holder: ");
+ * String password = sc.next(); userValues.setPassword(password);
+ * 
+ * //System.out.println(userValues.getAccountType()+" "+userValues.getFullName()
+ * +" "+userValues.getAddress() //+" "+userValues.getPhoneNumber());
+ * System.out.println(userValues);
+ * 
+ * //add account info to ArrayList
+ */
