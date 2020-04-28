@@ -7,6 +7,10 @@ public class Account {
 	private double endBalance;
 	private String accType;
 	
+	public Account(String AccNum, double intialBalance, double endBalance, String accType) { 
+		
+	
+	
 	public String getAccNum() {
 		return AccNum;
 	}
@@ -31,6 +35,7 @@ public class Account {
 	public void setAccType(String accType) {
 		this.accType = accType;
 	}
+	
 	@Override
 	public String toString() {
 		return "Account [AccNum=" + AccNum + ", initialBalance=" + initialBalance + ", endBalance=" + endBalance
