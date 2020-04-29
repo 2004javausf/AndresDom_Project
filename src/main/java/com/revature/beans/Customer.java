@@ -21,7 +21,7 @@ public class Customer implements Serializable  {
 	public void customer(){
 		//super();
 		//Roster.warriorList.add(this);
-		//FileStuff.writeWarriorFile(Roster.warriorList);
+		//FileStuff.writeCustomerFile(Roster.warriorList);
 	}
 	
 	public void profileInfo(String customerName, String address, String phoneNumber, String userName, 
