@@ -85,6 +85,8 @@ public class CustomerForm {
 			break;
 			}
 			
+			//creating folder to store arraList information
+			
 			FileWriter writer = null;
 			try {
 				writer = new FileWriter("output.txt");
